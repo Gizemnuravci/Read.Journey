@@ -54,6 +54,7 @@ export default function LibraryPage() {
   const handleAddBook = async (data) => {
     try {
       await addBookRequest(data);
+      setNotification("Book added to your library");
       setShowSuccess(true);
       await loadBooks();
     } catch (err) {

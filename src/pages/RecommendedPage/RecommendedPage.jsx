@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MainLayout from "../../components/layout/MainLayout/MainLayout";
 import Dashboard from "../../components/dashboard/Dashboard/Dashboard";
 import FiltersForm from "../../components/dashboard/FiltersForm/FiltersForm";
@@ -14,6 +15,7 @@ import styles from "./RecommendedPage.module.css";
 
 export default function RecommendedPage() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [books, setBooks] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -54,9 +56,17 @@ export default function RecommendedPage() {
   };
 
   const handleAddToLibrary = async () => {
+    if (!selectedBook?._id && !selectedBook?.id) {
+      setNotification("No book selected");
+      return;
+    }
+
     try {
-      await addBookByIdRequest(selectedBook._id);
+      const bookId = selectedBook._id || selectedBook.id;
+      await addBookByIdRequest(bookId);
       setSelectedBook(null);
+      setNotification("Book added to your library");
+      navigate("/library");
     } catch (err) {
       setNotification(err.response?.data?.message || "Failed to add book");
     }
