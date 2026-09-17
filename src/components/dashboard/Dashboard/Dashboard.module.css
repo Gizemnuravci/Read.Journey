@@ -1,0 +1,21 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media (min-width: 768px) {
+  .dashboardContainer {
+    padding: 24px;
+  }
+}

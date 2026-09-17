@@ -1,0 +1,62 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fcfcfc;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.iconBtnActive {
+  opacity: 1;
+}
+
+.hourglassIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+.chartIcon {
+  width: 20px;
+  height: 20px;
+  stroke: #686868;
+  fill: none;
+  opacity: 0.5;
+}
+
+.chartIconActive {
+  stroke: #fcfcfc;
+  opacity: 1;
+}
+
+.iconBtn:not(.iconBtnActive) .hourglassIcon {
+  opacity: 0.5;
+}

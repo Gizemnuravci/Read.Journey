@@ -1,0 +1,23 @@
+.pageLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .pageLayout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .pageLayout > aside {
+    width: 280px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .pageLayout > aside {
+    width: 320px;
+  }
+}

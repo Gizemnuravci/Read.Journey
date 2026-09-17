@@ -1,0 +1,69 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fcfcfc;
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fcfcfc;
+}
+
+.item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #686868;
+}
+
+.highlight {
+  color: #fcfcfc;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fcfcfc;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  stroke: #fcfcfc;
+  fill: none;
+}

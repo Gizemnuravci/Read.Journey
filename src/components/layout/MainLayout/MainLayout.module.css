@@ -1,0 +1,24 @@
+.appContainer {
+  min-height: 100vh;
+  background-color: #141414;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mainLayout {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .appContainer {
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .appContainer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 64px;
+  }
+}

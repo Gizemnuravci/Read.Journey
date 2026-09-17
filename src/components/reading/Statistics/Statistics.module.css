@@ -1,0 +1,76 @@
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #686868;
+}
+
+.chartCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background-color: #262626;
+  border-radius: 12px;
+  padding: 16px 12px 18px;
+}
+
+.chartWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.chart {
+  width: 144px;
+  height: 144px;
+}
+
+.chartBg {
+  stroke: #262626;
+}
+
+.chartProgress {
+  stroke: #30b94d;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.chartText {
+  fill: #fcfcfc;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  background-color: #30b94d;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legendPercent {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #30b94d;
+}
+
+.legendPages {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: #686868;
+}

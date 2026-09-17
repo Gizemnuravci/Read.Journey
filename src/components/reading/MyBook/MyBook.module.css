@@ -1,0 +1,112 @@
+.section {
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fcfcfc;
+}
+
+.timeLeft {
+  margin: 0;
+  font-size: 14px;
+  color: #686868;
+}
+
+.bookDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.cover {
+  width: 160px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.bookTitle {
+  margin: 8px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fcfcfc;
+  text-align: center;
+}
+
+.author {
+  margin: 0;
+  font-size: 14px;
+  color: #686868;
+}
+
+.recordBtn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #e90516;
+  border: 3px solid #fcfcfc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  transition: transform 0.2s ease;
+}
+
+.recordBtn:hover {
+  transform: scale(1.05);
+}
+
+.recording {
+  animation: pulse 1.5s infinite;
+}
+
+.playIcon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent #fcfcfc;
+  margin-left: 4px;
+}
+
+.stopIcon {
+  width: 18px;
+  height: 18px;
+  background-color: #fcfcfc;
+  border-radius: 2px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(233, 5, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(233, 5, 22, 0);
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 24px 32px;
+  }
+}

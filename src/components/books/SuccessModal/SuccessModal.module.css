@@ -1,0 +1,24 @@
+.content {
+  text-align: center;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 0 auto 16px;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fcfcfc;
+}
+
+.message {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #686868;
+}

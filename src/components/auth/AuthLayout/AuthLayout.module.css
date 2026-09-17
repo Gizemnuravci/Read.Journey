@@ -1,0 +1,158 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #141414;
+  color: #fcfcfc;
+  padding: 16px;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.leftPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  padding: 40px 32px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.content {
+  width: 100%;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logoIcon {
+  width: 42px;
+  height: 17px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.titleMuted {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btnPrimary {
+  height: 52px;
+  padding: 0 32px;
+  background-color: #fcfcfc;
+  color: #1f1f1f;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+.btnSecondary {
+  height: 52px;
+  padding: 0 32px;
+  background: transparent;
+  color: #fcfcfc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background-color: #fcfcfc;
+  color: #1f1f1f;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .leftPanel {
+    padding: 48px 56px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .leftPanel {
+    padding: 60px 80px;
+    justify-content: flex-start;
+  }
+
+  .content {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .leftPanel {
+    border-radius: 24px;
+    padding: 32px 24px;
+    flex: none;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
