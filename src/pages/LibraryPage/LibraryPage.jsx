@@ -32,8 +32,12 @@ export default function LibraryPage() {
       const res = await getOwnBooks(status);
       const ownBooks = Array.isArray(res.data)
         ? res.data
-        : res.data?.results || res.data?.books || res.data?.data;
-      setBooks(ownBooks || []);
+        : res.data?.results ||
+          res.data?.books ||
+          res.data?.data?.results ||
+          res.data?.data?.books ||
+          (Array.isArray(res.data?.data) ? res.data.data : []);
+      setBooks(Array.isArray(ownBooks) ? ownBooks : []);
     } catch (err) {
       setNotification(err.response?.data?.message || "Failed to load library");
     }

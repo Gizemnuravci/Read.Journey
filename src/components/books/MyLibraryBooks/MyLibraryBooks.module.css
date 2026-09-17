@@ -94,8 +94,13 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(140px, 220px));
+  justify-content: start;
   gap: 16px;
+}
+
+.grid > li {
+  min-width: 0;
 }
 
 @media (min-width: 768px) {
@@ -104,13 +109,13 @@
   }
 
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(160px, 220px));
     gap: 20px;
   }
 }
 
 @media (min-width: 1440px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 220px));
   }
 }

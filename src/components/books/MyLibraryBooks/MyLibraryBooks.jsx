@@ -7,7 +7,7 @@ const STATUS_OPTIONS = [
   { value: "", label: "All books" },
   { value: "unread", label: "Unread" },
   { value: "in-progress", label: "In progress" },
-  { value: "done", label: "Done" },
+  { value: "completed", label: "Done" },
 ];
 
 export default function MyLibraryBooks({
@@ -52,7 +52,7 @@ export default function MyLibraryBooks({
       ) : (
         <ul className={styles.grid}>
           {books.map((book) => (
-            <li key={book._id}>
+            <li key={book._id || book.bookId || book.id}>
               <BookCard
                 book={book}
                 onClick={onBookClick}
