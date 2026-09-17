@@ -30,7 +30,8 @@ export default function LibraryPage() {
   const loadBooks = useCallback(async () => {
     try {
       const res = await getOwnBooks(status);
-      setBooks(res.data || []);
+      const ownBooks = Array.isArray(res.data) ? res.data : res.data?.results;
+      setBooks(ownBooks || []);
     } catch (err) {
       setNotification(err.response?.data?.message || "Failed to load library");
     }
@@ -52,7 +53,7 @@ export default function LibraryPage() {
     try {
       await addBookRequest(data);
       setShowSuccess(true);
-      loadBooks();
+      await loadBooks();
     } catch (err) {
       setNotification(err.response?.data?.message || "Failed to add book");
     }
