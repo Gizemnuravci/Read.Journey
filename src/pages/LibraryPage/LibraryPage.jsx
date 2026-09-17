@@ -30,7 +30,9 @@ export default function LibraryPage() {
   const loadBooks = useCallback(async () => {
     try {
       const res = await getOwnBooks(status);
-      const ownBooks = Array.isArray(res.data) ? res.data : res.data?.results;
+      const ownBooks = Array.isArray(res.data)
+        ? res.data
+        : res.data?.results || res.data?.books || res.data?.data;
       setBooks(ownBooks || []);
     } catch (err) {
       setNotification(err.response?.data?.message || "Failed to load library");
