@@ -64,7 +64,15 @@
   height: 120px;
   border-radius: 50%;
   background-color: #262626;
-  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyBook {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 .emptyText {

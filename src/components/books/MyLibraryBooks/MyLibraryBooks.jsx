@@ -1,5 +1,6 @@
 import BookCard from "../BookCard/BookCard";
 import SpriteIcon from "../../common/SpriteIcon/SpriteIcon";
+import bookIcon from "../../../assets/book.jpg";
 import styles from "./MyLibraryBooks.module.css";
 
 const STATUS_OPTIONS = [
@@ -39,7 +40,9 @@ export default function MyLibraryBooks({
 
       {books.length === 0 ? (
         <div className={styles.empty}>
-          <div className={styles.emptyCircle} aria-hidden="true" />
+          <div className={styles.emptyCircle} aria-hidden="true">
+            <img src={bookIcon} alt="" className={styles.emptyBook} />
+          </div>
           <p className={styles.emptyText}>
             To start training, add{" "}
             <span className={styles.highlight}>some of your books</span> or from
