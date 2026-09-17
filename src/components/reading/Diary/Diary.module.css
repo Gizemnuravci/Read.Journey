@@ -16,8 +16,16 @@
   height: 120px;
   border-radius: 50%;
   background-color: #262626;
-  opacity: 0.5;
   margin: 8px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyStar {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
 .list {

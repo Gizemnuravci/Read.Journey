@@ -1,4 +1,5 @@
 import SpriteIcon from "../../common/SpriteIcon/SpriteIcon";
+import starIcon from "../../../assets/star.png";
 import styles from "./Diary.module.css";
 
 function formatDate(dateStr) {
@@ -18,7 +19,9 @@ export default function Diary({ readings, onDeleteReading }) {
           Here you will see when and how much you read. To record, click on the
           red button above.
         </p>
-        <div className={styles.emptyCircle} aria-hidden="true" />
+        <div className={styles.emptyCircle} aria-hidden="true">
+          <img src={starIcon} alt="" className={styles.emptyStar} />
+        </div>
       </div>
     );
   }

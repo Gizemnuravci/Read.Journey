@@ -8,7 +8,7 @@ import RecommendedPreview from "../../components/dashboard/RecommendedPreview/Re
 import MyLibraryBooks from "../../components/books/MyLibraryBooks/MyLibraryBooks";
 import BookDetailsModal from "../../components/books/BookDetailsModal/BookDetailsModal";
 import SuccessModal from "../../components/books/SuccessModal/SuccessModal";
-import thumbsUpIcon from "../../assets/thumbs-up.png";
+import okeyIcon from "../../assets/okey.png";
 import Notification from "../../components/common/Notification/Notification";
 import {
   getOwnBooks,
@@ -99,7 +99,7 @@ export default function LibraryPage() {
       <SuccessModal
         isOpen={showSuccess}
         onClose={() => setShowSuccess(false)}
-        icon={thumbsUpIcon}
+        icon={okeyIcon}
         title="Good job"
         message="Your book is now in the library! The joy knows no bounds and now you can start your training"
       />
