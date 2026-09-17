@@ -8,15 +8,15 @@ export default function AddBookForm({ onAddBook }) {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     resolver: yupResolver(addBookSchema),
     defaultValues: { title: "", author: "", totalPages: "" },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (onAddBook) {
-      onAddBook({
+      await onAddBook({
         title: data.title,
         author: data.author,
         totalPages: Number(data.totalPages),
@@ -75,7 +75,7 @@ export default function AddBookForm({ onAddBook }) {
           )}
         </div>
       </div>
-      <button type="submit" className={styles.btnSubmit}>
+      <button type="submit" className={styles.btnSubmit} disabled={isSubmitting}>
         Add book
       </button>
     </form>
