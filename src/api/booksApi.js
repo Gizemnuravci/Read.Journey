@@ -11,7 +11,9 @@ export const getRecommendedBooks = (
   });
 
 export const getOwnBooks = (status = "") =>
-  axiosInstance.get("/books/own", { params: { status } });
+  axiosInstance.get("/books/own", {
+    params: status ? { status } : {},
+  });
 
 export const getBookById = (id) => axiosInstance.get(`/books/${id}`);
 

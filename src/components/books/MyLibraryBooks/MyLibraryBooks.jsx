@@ -6,7 +6,7 @@ import styles from "./MyLibraryBooks.module.css";
 const STATUS_OPTIONS = [
   { value: "", label: "All books" },
   { value: "unread", label: "Unread" },
-  { value: "inProgress", label: "In progress" },
+  { value: "in-progress", label: "In progress" },
   { value: "done", label: "Done" },
 ];
 
