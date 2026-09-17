@@ -61,7 +61,7 @@
 }
 
 .chevronRight {
-  transform: rotate(180deg);
+  transform: none;
 }
 
 .grid {
