@@ -56,19 +56,25 @@ export default function RecommendedPage() {
   };
 
   const handleAddToLibrary = async () => {
-    if (!selectedBook?._id && !selectedBook?.id) {
+    const bookId = selectedBook?._id || selectedBook?.bookId || selectedBook?.id;
+
+    if (!bookId) {
       setNotification("No book selected");
       return;
     }
 
     try {
-      const bookId = selectedBook._id || selectedBook.id;
       await addBookByIdRequest(bookId);
+      await dispatch(fetchCurrentUser());
       setSelectedBook(null);
       setNotification("Book added to your library");
-      navigate("/library");
+      navigate("/library", { replace: true });
     } catch (err) {
-      setNotification(err.response?.data?.message || "Failed to add book");
+      setNotification(
+        err.response?.data?.message ||
+          err.response?.data?.error ||
+          "Failed to add book",
+      );
     }
   };
 
